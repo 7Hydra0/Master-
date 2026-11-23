@@ -17,3 +17,4 @@
 .toc{display:flex;flex-wrap:wrap;gap:8px 20px;margin:28px 0 8px;font-size:12px}.toc a{color:#9a773e;border-bottom:1px solid #d9c9a6}
 .flinks a{font-size:10px;color:#aab5c0;margin-left:18px}.todo{background:#fff3d9;color:#76551d;padding:0 4px}
 @media(max-width:800px){.seats,.decisions{grid-template-columns:1fr}.flinks a:first-child{margin-left:0}}
+.brand-logo{display:block;height:43px;width:auto;max-width:120px;object-fit:contain}
