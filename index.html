@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0b1c31">
 <meta name="description" content="Conselho Master — administração, orientação e preservação institucional.">
 <title>Conselho Master | Portal Institucional</title>
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
@@ -12,13 +14,20 @@
 </head>
 <body>
 <header class="topbar">
-  <a class="brand" href="#inicio"><span class="brand-mark">M</span><span><b>CONSELHO MASTER</b><small>Administração · Orientação · Continuidade</small></span></a>
-  <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
-  <nav class="nav">
-    <a href="#institucional">Institucional</a><a href="#governanca">Governança</a><a href="#servicos">Serviços</a><a href="#contato">Contato</a>
+  <a class="brand" href="#inicio">
+    <img class="brand-logo" src="assets/images/master-logo.gif" alt="Logo do Conselho Master">
+    <span><b>CONSELHO MASTER</b><small>Administração · Orientação · Continuidade</small></span>
+  </a>
+  <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">☰</button>
+  <nav class="nav" id="main-nav">
+    <a href="#institucional">Institucional</a>
+    <a href="#governanca">Governança</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
     <a class="nav-cta" href="admin.html">Área restrita</a>
   </nav>
 </header>
+
 <main>
 <section class="hero" id="inicio">
   <div class="hero-shade"></div>
@@ -26,38 +35,123 @@
     <div class="eyebrow">PORTAL INSTITUCIONAL</div>
     <h1>Conselho <em>Master</em></h1>
     <p>Administração, orientação e preservação institucional.</p>
-    <div class="hero-actions"><a class="btn primary" href="#institucional">Conheça o Conselho</a><a class="btn ghost" href="#servicos">Conheça os serviços</a></div>
+    <div class="hero-actions">
+      <a class="btn primary" href="#institucional">Conheça o Conselho</a>
+      <a class="btn ghost" href="#servicos">Conheça os serviços</a>
+    </div>
   </div>
   <div class="hero-foot"><span>ESTRUTURA · GOVERNANÇA · SERVIÇOS</span><span>01 / 04</span></div>
 </section>
+
 <section class="intro section" id="institucional">
   <div class="section-kicker">01 — INSTITUCIONAL</div>
-  <div class="intro-grid"><div><h2>Uma estrutura orientada por <em>princípios</em>.</h2></div><div><p>O Conselho Master é apresentado como uma organização dedicada à administração, orientação e preservação de sua estrutura. Este portal reúne sua carta institucional, composição, diretrizes e canais de atendimento.</p><p class="muted">Conheça a organização, consulte suas diretrizes e entre em contato para solicitar informações sobre os serviços disponíveis.</p></div></div>
-  <div class="principles"><article><span>01</span><h3>Integridade</h3><p>Responsabilidade, transparência e respeito nas relações.</p></article><article><span>02</span><h3>Continuidade</h3><p>Preservação da memória, dos registros e das decisões.</p></article><article><span>03</span><h3>Organização</h3><p>Processos claros, papéis definidos e comunicação objetiva.</p></article></div>
-</section>
-<section class="dark-section section" id="governanca">
-  <div class="section-kicker light">02 — GOVERNANÇA</div>
-  <div class="governance-grid"><div><h2>Regras claras.<br><em>Decisões registradas.</em></h2><p>A governança organiza a composição, as competências, as deliberações e as responsabilidades dos integrantes.</p><a class="text-link" href="#carta">Consultar carta institucional ↗</a></div>
-  <div class="governance-list"><div><b>Composição</b><span>Duas cadeiras permanentes e cadeiras ordinárias, conforme a carta.</span></div><div><b>Deliberações</b><span>Busca de consenso, votação quando necessário e registro das decisões.</span></div><div><b>Responsabilidade</b><span>Respeito mútuo, direito de manifestação e dever de cumprir acordos.</span></div></div></div>
-</section>
-<section class="section services" id="servicos">
-  <div class="section-kicker">03 — SERVIÇOS</div><h2>Atendimento e soluções <em>sob consulta</em>.</h2><p class="section-lead">Apresente aqui os serviços efetivamente oferecidos pelo Conselho. Os itens abaixo são categorias iniciais editáveis, não uma declaração de habilitação profissional.</p>
-  <div class="service-grid">
-    <article class="service-card"><span class="service-no">01</span><h3>Organização administrativa</h3><p>Apoio na estruturação de rotinas, fluxos internos, responsabilidades e registros.</p><a href="#contato" data-service="Organização administrativa">Solicitar informações ↗</a></article>
-    <article class="service-card"><span class="service-no">02</span><h3>Documentação institucional</h3><p>Organização e padronização de comunicados, atas, regulamentos e documentos internos.</p><a href="#contato" data-service="Documentação institucional">Solicitar informações ↗</a></article>
-    <article class="service-card"><span class="service-no">03</span><h3>Consultoria organizacional</h3><p>Orientação geral sobre processos, governança, comunicação e organização de equipes.</p><a href="#contato" data-service="Consultoria organizacional">Solicitar informações ↗</a></article>
+  <div class="intro-grid">
+    <div><h2>Uma estrutura orientada por <em>princípios</em>.</h2></div>
+    <div>
+      <p>O Conselho Master é apresentado como uma organização dedicada à administração, orientação e preservação de sua estrutura. Este portal reúne sua carta institucional, composição, diretrizes e canais de atendimento.</p>
+      <p class="muted">Conheça a organização, consulte suas diretrizes e entre em contato para solicitar informações sobre os serviços disponíveis.</p>
+    </div>
+  </div>
+  <div class="principles">
+    <article><span>01</span><h3>Integridade</h3><p>Responsabilidade, transparência e respeito nas relações.</p></article>
+    <article><span>02</span><h3>Continuidade</h3><p>Preservação da memória, dos registros e das decisões.</p></article>
+    <article><span>03</span><h3>Organização</h3><p>Processos claros, papéis definidos e comunicação objetiva.</p></article>
   </div>
 </section>
+
+<section class="dark-section section" id="governanca">
+  <div class="section-kicker light">02 — GOVERNANÇA</div>
+  <div class="governance-grid">
+    <div>
+      <h2>Regras claras.<br><em>Decisões registradas.</em></h2>
+      <p>A governança organiza a composição, as competências, as deliberações e as responsabilidades dos integrantes.</p>
+      <a class="text-link" href="carta.html">Consultar carta institucional ↗</a>
+    </div>
+    <div class="governance-list">
+      <div><b>Composição</b><span>Duas cadeiras permanentes e cadeiras ordinárias, conforme a carta.</span></div>
+      <div><b>Deliberações</b><span>Busca de consenso, votação quando necessário e registro das decisões.</span></div>
+      <div><b>Responsabilidade</b><span>Respeito mútuo, direito de manifestação e dever de cumprir acordos.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section services" id="servicos">
+  <div class="section-kicker">03 — SERVIÇOS</div>
+  <h2>Atendimento e soluções <em>sob consulta</em>.</h2>
+  <p class="section-lead">Apresente aqui os serviços efetivamente oferecidos pelo Conselho. Os itens abaixo são categorias iniciais editáveis, não uma declaração de habilitação profissional.</p>
+  <div class="service-grid">
+    <article class="service-card">
+      <span class="service-no">01</span>
+      <h3>Organização administrativa</h3>
+      <p>Apoio na estruturação de rotinas, fluxos internos, responsabilidades e registros.</p>
+      <a href="#contato" data-service="Organização administrativa">Solicitar informações ↗</a>
+    </article>
+    <article class="service-card">
+      <span class="service-no">02</span>
+      <h3>Documentação institucional</h3>
+      <p>Organização e padronização de comunicados, atas, regulamentos e documentos internos.</p>
+      <a href="#contato" data-service="Documentação institucional">Solicitar informações ↗</a>
+    </article>
+    <article class="service-card">
+      <span class="service-no">03</span>
+      <h3>Consultoria organizacional</h3>
+      <p>Orientação geral sobre processos, governança, comunicação e organização de equipes.</p>
+      <a href="#contato" data-service="Consultoria organizacional">Solicitar informações ↗</a>
+    </article>
+  </div>
+</section>
+
 <section class="section charter" id="carta">
-  <div class="section-kicker">04 — DOCUMENTO INSTITUCIONAL</div><div class="charter-head"><h2>Carta <em>Institucional</em></h2><p>Resumo das matérias previstas na carta atual. Consulte o documento integral para a redação oficial.</p></div>
-  <div class="charter-grid"><a href="carta.html"><span>I</span><b>Composição</b><small>Estrutura e cadeiras</small></a><a href="carta.html#diretrizes"><span>II</span><b>Diretrizes</b><small>Princípios e objetivos</small></a><a href="carta.html#deliberacoes"><span>III</span><b>Deliberações</b><small>Autoridade e decisões</small></a><a href="carta.html#conduta"><span>IV</span><b>Conduta</b><small>Responsabilidade e convivência</small></a></div>
+  <div class="section-kicker">04 — DOCUMENTO INSTITUCIONAL</div>
+  <div class="charter-head">
+    <h2>Carta <em>Institucional</em></h2>
+    <p>Resumo das matérias previstas na carta atual. Consulte o documento integral para a redação oficial.</p>
+  </div>
+  <div class="charter-grid">
+    <a href="carta.html#composicao"><span>I</span><b>Composição</b><small>Estrutura e cadeiras</small></a>
+    <a href="carta.html#diretrizes"><span>II</span><b>Diretrizes</b><small>Princípios e objetivos</small></a>
+    <a href="carta.html#deliberacoes"><span>III</span><b>Deliberações</b><small>Autoridade e decisões</small></a>
+    <a href="carta.html#conduta"><span>IV</span><b>Conduta</b><small>Responsabilidade e convivência</small></a>
+  </div>
   <a class="btn dark-btn" href="carta.html">Ler carta institucional completa</a>
 </section>
+
 <section class="contact section" id="contato">
-  <div class="section-kicker light">05 — CONTATO</div><div class="contact-grid"><div><h2>Vamos conversar?</h2><p>Envie uma solicitação de informação ou orçamento. A equipe poderá retornar pelo canal informado.</p><p class="muted">Preencha apenas dados necessários. Não envie senhas, documentos sensíveis ou informações bancárias por este formulário.</p></div>
-  <form id="contact-form" class="contact-form"><label>Nome<input name="name" required maxlength="100" placeholder="Seu nome"></label><label>E-mail<input name="email" type="email" required maxlength="160" placeholder="voce@email.com"></label><label>Assunto<select name="subject"><option>Informações institucionais</option><option>Organização administrativa</option><option>Documentação institucional</option><option>Consultoria organizacional</option><option>Outro assunto</option></select></label><label>Mensagem<textarea name="message" required maxlength="1500" rows="4" placeholder="Como podemos ajudar?"></textarea></label><button class="btn primary" type="submit">Preparar solicitação</button><p id="form-feedback" class="form-feedback" role="status"></p></form></div>
+  <div class="section-kicker light">05 — CONTATO</div>
+  <div class="contact-grid">
+    <div>
+      <h2>Vamos conversar?</h2>
+      <p>Envie uma solicitação de informação ou orçamento. A equipe poderá retornar pelo canal informado.</p>
+      <p class="muted">Preencha apenas dados necessários. Não envie senhas, documentos sensíveis ou informações bancárias por este formulário.</p>
+    </div>
+    <form id="contact-form" class="contact-form">
+      <label>Nome<input name="name" required maxlength="100" placeholder="Seu nome"></label>
+      <label>E-mail<input name="email" type="email" required maxlength="160" placeholder="voce@email.com"></label>
+      <label>Assunto
+        <select name="subject">
+          <option>Informações institucionais</option>
+          <option>Organização administrativa</option>
+          <option>Documentação institucional</option>
+          <option>Consultoria organizacional</option>
+          <option>Outro assunto</option>
+        </select>
+      </label>
+      <label>Mensagem<textarea name="message" required maxlength="1500" rows="4" placeholder="Como podemos ajudar?"></textarea></label>
+      <button class="btn primary" type="submit">Preparar solicitação</button>
+      <p id="form-feedback" class="form-feedback" role="status"></p>
+    </form>
+  </div>
 </section>
 </main>
-<footer><a class="brand footer-brand" href="#inicio"><span class="brand-mark">M</span><span><b>CONSELHO MASTER</b><small>Portal institucional</small></span></a><p>© <span id="year"></span> Conselho Master. Conteúdo institucional.</p><a href="admin.html">Acesso administrativo ↗</a></footer>
+
+<footer>
+  <a class="brand footer-brand" href="#inicio">
+    <img class="brand-logo" src="assets/images/master-logo.gif" alt="Logo do Conselho Master">
+    <span><b>CONSELHO MASTER</b><small>Portal institucional</small></span>
+  </a>
+  <p>© <span id="year"></span> Conselho Master. Conteúdo institucional.</p>
+  <a href="admin.html">Acesso administrativo ↗</a>
+</footer>
 <script src="script.js"></script>
-</body></html>
+</body>
+</html>
