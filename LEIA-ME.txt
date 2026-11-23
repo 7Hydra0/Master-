@@ -1,0 +1,32 @@
+CONSELHO MASTER — NOVA VERSÃO (PROTÓTIPO)
+
+Conteúdo:
+- index.html: portal institucional público.
+- carta.html: carta institucional organizada com base no texto exibido no repositório.
+- admin.html: protótipo visual de painel administrativo.
+- style.css / script.js: estilos e interações.
+
+COMO PUBLICAR:
+1. Extraia o ZIP.
+2. Acesse Netlify e escolha Add new site > Deploy manually.
+3. Arraste a pasta extraída (ou os arquivos do site) para a área de deploy.
+4. Teste em celular e computador.
+
+IMPORTANTE SOBRE O PAINEL:
+O painel admin.html é apenas uma demonstração local usando localStorage.
+Não possui login real, permissões, banco de dados, sincronização entre usuários,
+envio de formulários para servidor, nem trilha de auditoria segura.
+Não publique como painel administrativo real nem armazene dados pessoais.
+Para produção, integrar autenticação, banco de dados, regras de acesso,
+validação no servidor, backups e logs (por exemplo, Supabase/Firebase ou backend próprio).
+
+IMPORTANTE SOBRE SERVIÇOS:
+As categorias de serviços são exemplos editáveis. Antes de publicar, confirme
+quais serviços são realmente oferecidos, preços, condições e qualificações.
+O formulário usa mailto como demonstração e depende de um aplicativo de e-mail
+configurado no dispositivo. Configure um endpoint/form provider antes de produção.
+
+IDENTIDADE:
+A proposta preserva a linha institucional azul-marinho, branco e detalhes discretos
+em champanhe. O monograma é tipográfico para evitar substituir o brasão oficial.
+Adicione o logo oficial em assets e substitua o monograma quando desejar.
