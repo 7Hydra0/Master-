@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0b1c31">
-<meta name="description" content="Conselho Master — administração, orientação e preservação institucional.">
+<meta name="description" content="Conselho Master — administração, orientação e preservação institucional."><meta property="og:type" content="website"><meta property="og:title" content="Conselho Master | Portal Institucional"><meta property="og:description" content="Administração, orientação e preservação institucional."><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230b1c31'/%3E%3Ctext x='32' y='46' font-size='40' text-anchor='middle' fill='%23c7a96b' font-family='serif'%3EM%3C/text%3E%3C/svg%3E">
 <title>Conselho Master | Portal Institucional</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,15 +11,16 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <header class="topbar">
   <a class="brand" href="#inicio"><span class="brand-mark">M</span><span><b>CONSELHO MASTER</b><small>Administração · Orientação · Continuidade</small></span></a>
-  <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
-  <nav class="nav">
+  <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>
+  <nav class="nav" id="menu" aria-label="Principal">
     <a href="#institucional">Institucional</a><a href="#governanca">Governança</a><a href="#servicos">Serviços</a><a href="#contato">Contato</a>
     <a class="nav-cta" href="admin.html">Área restrita</a>
   </nav>
 </header>
-<main>
+<main id="conteudo">
 <section class="hero" id="inicio">
   <div class="hero-shade"></div>
   <div class="hero-content">
@@ -50,14 +51,14 @@
 </section>
 <section class="section charter" id="carta">
   <div class="section-kicker">04 — DOCUMENTO INSTITUCIONAL</div><div class="charter-head"><h2>Carta <em>Institucional</em></h2><p>Resumo das matérias previstas na carta atual. Consulte o documento integral para a redação oficial.</p></div>
-  <div class="charter-grid"><a href="carta.html"><span>I</span><b>Composição</b><small>Estrutura e cadeiras</small></a><a href="carta.html#diretrizes"><span>II</span><b>Diretrizes</b><small>Princípios e objetivos</small></a><a href="carta.html#deliberacoes"><span>III</span><b>Deliberações</b><small>Autoridade e decisões</small></a><a href="carta.html#conduta"><span>IV</span><b>Conduta</b><small>Responsabilidade e convivência</small></a></div>
+  <div class="charter-grid"><a href="carta.html"><span>I</span><b>Composição</b><small>Estrutura e cadeiras</small></a><a href="carta.html#diretrizes"><span>II</span><b>Diretrizes</b><small>Princípios e objetivos</small></a><a href="carta.html#deliberacoes"><span>III</span><b>Deliberações</b><small>Autoridade e decisões</small></a><a href="carta.html#responsabilidade"><span>IV</span><b>Responsabilidade</b><small>Convivência e conduta</small></a></div>
   <a class="btn dark-btn" href="carta.html">Ler carta institucional completa</a>
 </section>
 <section class="contact section" id="contato">
   <div class="section-kicker light">05 — CONTATO</div><div class="contact-grid"><div><h2>Vamos conversar?</h2><p>Envie uma solicitação de informação ou orçamento. A equipe poderá retornar pelo canal informado.</p><p class="muted">Preencha apenas dados necessários. Não envie senhas, documentos sensíveis ou informações bancárias por este formulário.</p></div>
-  <form id="contact-form" class="contact-form"><label>Nome<input name="name" required maxlength="100" placeholder="Seu nome"></label><label>E-mail<input name="email" type="email" required maxlength="160" placeholder="voce@email.com"></label><label>Assunto<select name="subject"><option>Informações institucionais</option><option>Organização administrativa</option><option>Documentação institucional</option><option>Consultoria organizacional</option><option>Outro assunto</option></select></label><label>Mensagem<textarea name="message" required maxlength="1500" rows="4" placeholder="Como podemos ajudar?"></textarea></label><button class="btn primary" type="submit">Preparar solicitação</button><p id="form-feedback" class="form-feedback" role="status"></p></form></div>
+  <form id="contact-form" class="contact-form"><label>Nome<input name="name" required maxlength="100" placeholder="Seu nome"></label><label>E-mail<input name="email" type="email" required maxlength="160" placeholder="voce@email.com"></label><label>Assunto<select name="subject"><option>Informações institucionais</option><option>Organização administrativa</option><option>Documentação institucional</option><option>Consultoria organizacional</option><option>Outro assunto</option></select></label><label>Mensagem<textarea name="message" required maxlength="1500" rows="4" placeholder="Como podemos ajudar?"></textarea></label><input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><label class="consent"><input type="checkbox" required><span>Concordo em ser contatado pelo e-mail informado.</span></label><button class="btn primary" type="submit">Enviar solicitação</button><p id="form-feedback" class="form-feedback" role="status"></p></form></div>
 </section>
 </main>
 <footer><a class="brand footer-brand" href="#inicio"><span class="brand-mark">M</span><span><b>CONSELHO MASTER</b><small>Portal institucional</small></span></a><p>© <span id="year"></span> Conselho Master. Conteúdo institucional.</p><a href="admin.html">Acesso administrativo ↗</a></footer>
-<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script><script src="config.js"></script><script src="db.js"></script><script src="script.js"></script>
 </body></html>

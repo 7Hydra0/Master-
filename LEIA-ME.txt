@@ -1,32 +1,36 @@
-CONSELHO MASTER — NOVA VERSÃO (PROTÓTIPO)
+CONSELHO MASTER — VERSÃO COM SUPABASE
 
-Conteúdo:
-- index.html: portal institucional público.
-- carta.html: carta institucional organizada com base no texto exibido no repositório.
-- admin.html: protótipo visual de painel administrativo.
-- style.css / script.js: estilos e interações.
+ARQUIVOS
+index.html, carta.html, admin.html, style.css, script.js, admin.js
+config.js (suas chaves) · db.js (cliente Supabase) · supabase/schema.sql (tabelas e regras) · _headers (segurança no Netlify)
 
-COMO PUBLICAR:
-1. Extraia o ZIP.
-2. Acesse Netlify e escolha Add new site > Deploy manually.
-3. Arraste a pasta extraída (ou os arquivos do site) para a área de deploy.
-4. Teste em celular e computador.
+CONFIGURAR O SUPABASE (cerca de 10 minutos)
+1. Crie um projeto em supabase.com.
+2. SQL Editor: cole e execute supabase/schema.sql (uma única vez).
+3. Authentication > Providers > Email: desative "Allow new users to sign up".
+4. Authentication > Users > Add user: crie o seu usuário administrador (senha forte).
+5. SQL Editor: execute
+   insert into public.admins (user_id) select id from auth.users where email = 'SEU@EMAIL.COM';
+6. Project Settings > API: copie "Project URL" e a chave "anon public" para o config.js.
+   Nunca use a chave service_role no site.
+7. Teste: envie o formulário em index.html, depois entre em admin.html e veja a solicitação.
 
-IMPORTANTE SOBRE O PAINEL:
-O painel admin.html é apenas uma demonstração local usando localStorage.
-Não possui login real, permissões, banco de dados, sincronização entre usuários,
-envio de formulários para servidor, nem trilha de auditoria segura.
-Não publique como painel administrativo real nem armazene dados pessoais.
-Para produção, integrar autenticação, banco de dados, regras de acesso,
-validação no servidor, backups e logs (por exemplo, Supabase/Firebase ou backend próprio).
+PUBLICAR
+Netlify > Add new site > Deploy manually > arraste a pasta extraída.
 
-IMPORTANTE SOBRE SERVIÇOS:
-As categorias de serviços são exemplos editáveis. Antes de publicar, confirme
-quais serviços são realmente oferecidos, preços, condições e qualificações.
-O formulário usa mailto como demonstração e depende de um aplicativo de e-mail
-configurado no dispositivo. Configure um endpoint/form provider antes de produção.
+COMO FUNCIONA
+- Formulário do site: grava na tabela solicitacoes (origem "site").
+- Painel (admin.html): login por e-mail e senha; lista, muda o status, registra e exclui solicitações.
+- Visitantes só conseguem inserir. Somente usuários da tabela admins leem, alteram ou excluem.
 
-IDENTIDADE:
-A proposta preserva a linha institucional azul-marinho, branco e detalhes discretos
-em champanhe. O monograma é tipográfico para evitar substituir o brasão oficial.
-Adicione o logo oficial em assets e substitua o monograma quando desejar.
+SEGURANÇA
+- A chave anon é pública por design; a proteção real são as regras RLS do schema.sql.
+- O formulário tem campo isca, intervalo de 30 s e validação no banco. Para proteção forte
+  contra spam, use Cloudflare Turnstile com uma Edge Function.
+- O _headers inclui CSP. Se usar domínio próprio no Supabase, ajuste o connect-src.
+- Como o site coleta nome e e-mail, publique uma política de privacidade (LGPD) e defina
+  por quanto tempo os dados serão mantidos.
+
+ANTES DE PUBLICAR
+Os serviços são exemplos: confirme serviços, preços e condições. A carta é um texto-base:
+confirme a versão oficial. Substitua o monograma pelo logo oficial quando desejar.
