@@ -8,3 +8,12 @@
 .form-feedback.error{color:#ffb4a8}.contact-form .btn:disabled{opacity:.6;cursor:wait}
 .prose>p{max-width:68ch;line-height:1.85;color:#46576b;font-size:15px}.prose h2{font-size:clamp(26px,3vw,34px);margin-top:2em}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.alt{background:#fff}
+.seats{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin-top:40px}.seats article{border:1px solid #e4e8ed;padding:28px}.seats h3{font:600 22px "Playfair Display",serif;margin:0 0 14px}.seats ul{margin:0;padding-left:18px;color:#5e6c7c;font-size:13px;line-height:1.9}
+.decisions{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}.decisions div{border-top:1px solid #c7a96b;padding-top:16px}.decisions b{display:block;font:600 18px "Playfair Display",serif;margin-bottom:8px}.decisions span,.duties{font-size:13px;line-height:1.7;color:#5e6c7c}.duties{margin-top:36px;max-width:68ch}
+.notices{display:grid;gap:18px;margin-top:32px;max-width:760px}.notice{border-left:2px solid #c7a96b;padding:4px 0 4px 20px}.notice time{font-size:11px;color:#788391}.notice h3{font:600 20px "Playfair Display",serif;margin:6px 0}.notice p{margin:0;font-size:13px;line-height:1.7;color:#5e6c7c;white-space:pre-line}
+.faq{max-width:760px;margin-top:32px}.faq details{border-top:1px solid #d7dce2;padding:18px 0}.faq details:last-child{border-bottom:1px solid #d7dce2}.faq summary{cursor:pointer;font:600 18px "Playfair Display",serif}.faq p{margin:12px 0 0;font-size:13px;line-height:1.8;color:#5e6c7c}
+.toc{display:flex;flex-wrap:wrap;gap:8px 20px;margin:28px 0 8px;font-size:12px}.toc a{color:#9a773e;border-bottom:1px solid #d9c9a6}
+.flinks a{font-size:10px;color:#aab5c0;margin-left:18px}.todo{background:#fff3d9;color:#76551d;padding:0 4px}
+@media(max-width:800px){.seats,.decisions{grid-template-columns:1fr}.flinks a:first-child{margin-left:0}}

@@ -9,6 +9,7 @@
 <div class="stats"><div class="stat"><small>Total de solicitações</small><b id="s-total">0</b></div><div class="stat"><small>Novas</small><b id="s-new">0</b></div><div class="stat"><small>Concluídas</small><b id="s-done">0</b></div></div>
 <div class="admin-grid"><section class="panel"><h2>Registrar solicitação</h2><form id="request-form"><label>Nome ou referência<input name="name" required maxlength="100"></label><label>Tipo<select name="type"><option>Informações institucionais</option><option>Organização administrativa</option><option>Documentação institucional</option><option>Consultoria organizacional</option><option>Outro assunto</option></select></label><label>Observação<textarea name="note" rows="3" maxlength="1500"></textarea></label><button>Salvar solicitação</button></form></section>
 <section class="panel"><h2>Solicitações recentes</h2><div id="requests"></div></section></div>
+<div class="admin-grid"><section class="panel"><h2>Publicar comunicado</h2><form id="notice-form"><label>Título<input name="titulo" required maxlength="120"></label><label>Texto<textarea name="corpo" rows="4" required maxlength="2000"></textarea></label><button>Publicar no site</button></form></section><section class="panel"><h2>Comunicados</h2><div id="notices-admin"></div></section></div>
 </div>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script><script src="config.js"></script><script src="db.js"></script><script src="admin.js"></script></body></html>

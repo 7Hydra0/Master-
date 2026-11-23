@@ -1,7 +1,7 @@
 CONSELHO MASTER — VERSÃO COM SUPABASE
 
 ARQUIVOS
-index.html, carta.html, admin.html, style.css, script.js, admin.js
+index.html, carta.html, privacidade.html, admin.html, style.css, script.js, admin.js
 config.js (suas chaves) · db.js (cliente Supabase) · supabase/schema.sql (tabelas e regras) · _headers (segurança no Netlify)
 
 CONFIGURAR O SUPABASE (cerca de 10 minutos)
@@ -11,9 +11,10 @@ CONFIGURAR O SUPABASE (cerca de 10 minutos)
 4. Authentication > Users > Add user: crie o seu usuário administrador (senha forte).
 5. SQL Editor: execute
    insert into public.admins (user_id) select id from auth.users where email = 'SEU@EMAIL.COM';
-6. Project Settings > API: copie "Project URL" e a chave "anon public" para o config.js.
+6. SQL Editor: execute também supabase/02_comunicados.sql (habilita os comunicados do site).
+7. Project Settings > API: copie "Project URL" e a chave "anon public" para o config.js.
    Nunca use a chave service_role no site.
-7. Teste: envie o formulário em index.html, depois entre em admin.html e veja a solicitação.
+8. Teste: envie o formulário em index.html, depois entre em admin.html e veja a solicitação.
 
 PUBLICAR
 Netlify > Add new site > Deploy manually > arraste a pasta extraída.
@@ -32,5 +33,7 @@ SEGURANÇA
   por quanto tempo os dados serão mantidos.
 
 ANTES DE PUBLICAR
+A privacidade.html é um modelo: preencha os campos em amarelo (e-mail do responsável e prazo de
+guarda) e revise o texto com um profissional. Os comunicados do site são publicados pelo admin.html.
 Os serviços são exemplos: confirme serviços, preços e condições. A carta é um texto-base:
 confirme a versão oficial. Substitua o monograma pelo logo oficial quando desejar.
