@@ -7,7 +7,6 @@ menu?.addEventListener('click', () => {
   menu.textContent = open ? '✕' : '☰';
 });
 
-// Fecha o menu ao clicar em um link (mobile)
 document.querySelectorAll('.nav a').forEach(link => {
   link.addEventListener('click', () => {
     nav.classList.remove('open');
@@ -16,11 +15,9 @@ document.querySelectorAll('.nav a').forEach(link => {
   });
 });
 
-// Ano no footer
 const yearEl = document.querySelector('#year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Pré-seleciona o assunto ao clicar em "Solicitar informações"
 document.querySelectorAll('[data-service]').forEach(a => {
   a.addEventListener('click', () => {
     const sel = document.querySelector('[name="subject"]');
@@ -30,9 +27,39 @@ document.querySelectorAll('[data-service]').forEach(a => {
   });
 });
 
-// Formulário de contato (demonstração)
-document.querySelector('#contact-form')?.addEventListener('submit', e => {
+document.querySelector('#contact-form')?.addEventListener('submit', async e => {
   e.preventDefault();
-  document.querySelector('#form-feedback').textContent =
-    'Formulário demonstrativo: antes de publicar, conecte este formulário a um e-mail oficial ou serviço de recebimento. Nenhum dado foi enviado.';
+  const btn = e.target.querySelector('button[type="submit"]');
+  const feedback = document.querySelector('#form-feedback');
+  const formData = new FormData(e.target);
+
+  if (formData.get('website')) return; 
+
+  btn.disabled = true;
+  btn.textContent = 'Enviando...';
+  feedback.textContent = '';
+  feedback.classList.remove('error');
+
+  try {
+    const { error } = await supabaseClient
+      .from('solicitacoes')
+      .insert([{
+        nome: formData.get('name'),
+        tipo: formData.get('subject'),
+        observacao: formData.get('message'),
+        email: formData.get('email')
+      }]);
+
+    if (error) throw error;
+
+    feedback.textContent = 'Solicitação enviada com sucesso!';
+    e.target.reset();
+  } catch (err) {
+    console.error(err);
+    feedback.textContent = 'Ocorreu um erro. Tente novamente.';
+    feedback.classList.add('error');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Enviar solicitação';
+  }
 });
